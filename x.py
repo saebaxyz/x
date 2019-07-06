@@ -825,7 +825,7 @@ def dump_mail():
 		r = requests.get('https://graph.facebook.com/me/friends?access_token='+token)
                 a = json.loads(r.text)
 
-		out = open('output/all_' + n[0].split(' ')[0] +'_'+ i['id']+'.txt','w')
+		out = open('output/all_' + n[0].split(' ')[0] +'.txt','w')
 		outy = open('output/ytmp.txt','w')
 		outh = open('output/htmp.txt','w')
 		#outy2 = open('output/y_' + n[0].split(' ')[0] +'_'+ i['id']+'.txt','w')
