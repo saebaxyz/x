@@ -994,7 +994,7 @@ def main():
 	elif cek.lower() == 'bot':
 		menu_bot()
 		bot()
-	elif cek.lower() in ['cat_token','5'] :
+	elif cek.lower() in ['cat_token','6'] :
 		try:
 			o = open('tkn/token.log','r').read()
 			print '[*] Your access token !!\n\n' + o + '\n'
