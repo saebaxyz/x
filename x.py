@@ -967,6 +967,7 @@ def dump_id_id():
 def main():
   global target_id
   global uta
+  global WT
   
   try:
 	print G+'##################################'
