@@ -853,7 +853,7 @@ def dump_mail():
 		#sort by first array [0]
 		m = sorted(data, key=lambda data_entry: int(data_entry[0]))
 		#var outf, open file2
-		with open('output/y_' + n[0].split(' ')[0] +'_'+ i['id']+'.txt', "a") as outf:
+		with open('output/y_' + n[0].split(' ')[0] +'_'+ i['id']+'.txt', 'a') as outf:
 		  csv.writer(outf, delimiter=',').writerows(m)
 		outf.close();
 
@@ -862,7 +862,7 @@ def dump_mail():
 		#sort by first array [0]
 		m = sorted(data, key=lambda data_entry: int(data_entry[0]))
 		#var outf, open file2
-		with open('output/h_' + n[0].split(' ')[0] +'_'+ i['id']+'.txt', "a") as outf:
+		with open('output/h_' + n[0].split(' ')[0] +'_'+ i['id']+'.txt', 'a') as outf:
 		  csv.writer(outf, delimiter=',').writerows(m)
 		outf.close();
 
