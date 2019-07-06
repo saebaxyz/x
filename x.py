@@ -968,7 +968,8 @@ def main():
   global target_id
   global uta
   global WT
-  
+  global token
+
   try:
 	print G+'##################################'
 	print G+'[1] > Login Token'
