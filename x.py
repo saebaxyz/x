@@ -893,8 +893,8 @@ def dump_mail():
                 print '[*] done'
                 print "[*] all emails successfuly retrieved"
 		print '[*] file saved :'
-		print 'Semua Hasil Asli...:output/allm_' + n[0].split(' ')[0] +'.txt'
-		print "Yahoo tok..........:output/y_" + n[0].split(" ")[0] +"_"+ i['id']+".txt"
+		print 'Semua Hasil Asli:output/allm_' + n[0].split(' ')[0] +'.txt'
+		print "Yahoo tok:output/y_" + n[0].split(" ")[0] +"_"+ i['id']+".txt"
 		print "Hotmail,Aol,Outlook:output/h_" + n[0].split(" ")[0] +"_"+ i['id']+".txt"
 		os.system('rm -rf output/ytmp.txt')
 		os.system('rm -rf output/htmp.txt')
@@ -1169,13 +1169,18 @@ def info(target,target2):
 	global a , token
 
 	print '[*] Searching'
+	try:
+	  os.mkdir('output')
+	except OSError:
+	  pass
 	outi = open('output/info_'+target+'-'+target2+'.txt','w')
 
 	for i in a['data']:
-
+	  print G + '[-------- checkpoint 1 --------]'
 	  if target in  i['name'] or target in i['id'] or target=='Allz':
 	   x = requests.get("https://graph.facebook.com/"+i['id']+"?access_token="+token)
 	   y = json.loads(x.text)
+	   print G + '[-------- checkpoint 2 --------]'
 	   if target2 in y['email'] or target2=='Allz':
 		print ' '
 		print G + '[-------- INFORMATION --------]'.center(44)
